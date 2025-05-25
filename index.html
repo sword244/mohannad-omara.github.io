@@ -1,33 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
-    <title>م. مهند عمارة</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بطاقة مهند عمارة</title>
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            text-align: center; 
-            padding: 50px; 
-            background: #f0f8ff;
+        body {
+            font-family: 'Tajawal', Arial, sans-serif;
+            background: #f5f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
         }
         .card {
             background: white;
-            max-width: 500px;
-            margin: auto;
-            padding: 30px;
+            width: 100%;
+            max-width: 400px;
             border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
         }
-        h1 { color: #0066cc; }
-        a { color: #0066cc; text-decoration: none; }
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #0066cc;
+            margin: -60px auto 20px;
+            display: block;
+        }
+        .header {
+            background: #0066cc;
+            height: 100px;
+            position: relative;
+        }
+        h1 {
+            color: #333;
+            margin: 10px 0 5px;
+        }
+        .title {
+            color: #666;
+            font-size: 18px;
+        }
+        .contact-info {
+            padding: 20px;
+        }
+        .contact-item {
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .contact-item i {
+            margin-left: 10px;
+            color: #0066cc;
+        }
+        .download-btn {
+            background: #0066cc;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            display: inline-block;
+            margin: 20px 0;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .download-btn:hover {
+            background: #0052a3;
+            transform: translateY(-3px);
+        }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="card">
-        <h1>م. مهند عمارة</h1>
-        <p>مهندس أجهزة طبية</p>
-        <p><a href="tel:+966566061030">+966 56 606 1030</a></p>
-        <p><a href="mailto:mohannad.omaraa@gmail.com">mohannad.omaraa@gmail.com</a></p>
+        <div class="header"></div>
+        <img src="profile.jpg" alt="صورة مهند عمارة" class="profile-img">
+        
+        <div class="contact-info">
+            <h1>م. مهند عمارة</h1>
+            <p class="title">مهندس أجهزة طبية</p>
+            
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+966566061030">+966 56 606 1030</a>
+            </div>
+            
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:mohannad.omaraa@gmail.com">mohannad.omaraa@gmail.com</a>
+            </div>
+            
+            <a href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0AVERSION:3.0%0AFN:مهند عمارة%0ATEL:+966566061030%0AEMAIL:mohannad.omaraa@gmail.com%0ATITLE:مهندس أجهزة طبية%0AEND:VCARD" 
+               download="مهند عمارة.vcf" 
+               class="download-btn">
+                <i class="fas fa-download"></i> حفظ البيانات
+            </a>
+        </div>
     </div>
 </body>
 </html>
